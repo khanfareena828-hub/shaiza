@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Fredoka', sans-serif;
+    --font-hand: 'Caveat', cursive;
+    --font-body: 'Nunito', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #FFF9F9;
+    color: #4A352F;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-hand {
+    font-family: var(--font-hand);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom cute scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFB5C5;
+  border-radius: 9999px;
+  border: 2px solid #FFF0F3;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF94AA;
+}
+
+/* Smooth organic blob animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+/* Subtle pastel card shadow */
+.shadow-kawaii {
+  box-shadow: 0 10px 25px -5px rgba(244, 162, 178, 0.2), 0 8px 10px -6px rgba(244, 162, 178, 0.15);
+}
+
+.shadow-kawaii-hover {
+  box-shadow: 0 20px 30px -8px rgba(235, 131, 153, 0.28), 0 10px 15px -5px rgba(244, 162, 178, 0.18);
+}
